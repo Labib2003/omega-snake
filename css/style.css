@@ -1,0 +1,48 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: poppins;
+}
+
+header > h1 {
+    margin-bottom: 0;
+}
+
+button {
+    border: 0;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    background-color: tomato;
+    color: ivory;
+}
+
+input {
+    height: 1.8em;
+    border: 1px solid red;
+    border-radius: 3px;
+}
+
+#game-board {
+    background-color: #CCC;
+    height: 75vh;
+    width: 75vh;
+    display: grid;
+    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: repeat(21, 1fr);
+    margin-top: 25px;
+}
+
+@media only screen and (max-width: 900px) {
+    #game-board {
+        height: 75vw;
+        width: 75vw;
+    }
+}
