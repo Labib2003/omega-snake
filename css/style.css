@@ -21,21 +21,22 @@ header > h1 {
 }
 
 button {
+    height: 50px;
+    width: 50px;
     border: 0;
     border-radius: 3px;
-    padding: 0.5em 1em;
     background-color: tomato;
     color: ivory;
 }
 
 input {
-    height: 1.8em;
+    height: 45px;
     border: 1px solid red;
     border-radius: 3px;
 }
 
 #game-board {
-    background-color: #CCC;
+    background-color: #5ca140;
     height: 75vh;
     width: 75vh;
     display: grid;
@@ -54,7 +55,7 @@ input {
 #touch-controls > div {
     width: 200px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #game-over {
