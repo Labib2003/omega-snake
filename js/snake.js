@@ -26,3 +26,17 @@ export const draw = (gameBoard) => {
         gameBoard.appendChild(snakeSegment);
     });
 }
+
+export const expandSnake = (rate) => {
+    newSegments += rate;
+}
+
+export const onSnake = (position) => {
+    return snakeBody.some((segment) => {
+        return equalPositions(segment, position);
+    });
+}
+
+const equalPositions = (pos1, pos2) => {
+    return (pos1.x === pos2.x && pos1.y === pos2.y);
+}
