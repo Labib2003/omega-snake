@@ -23,7 +23,7 @@ speedUp.addEventListener('click', () => {
 
 //restart button
 restart.addEventListener('click', () => {
-    window.location = '/';
+    window.location.reload();
 })
 
 speedDown.addEventListener('click', () => {
