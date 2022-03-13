@@ -32,10 +32,21 @@ export const expandSnake = (rate) => {
     newSegments += rate;
 }
 
-export const onSnake = (position) => {
-    return snakeBody.some((segment) => {
+export const onSnake = (position, {ignoreHead = false} = {}) => {
+    return snakeBody.some((segment, index) => {
+        if (ignoreHead && index === 0){
+            return false;
+        }
         return equalPositions(segment, position);
     });
+}
+
+export const getSnakeHead = () => {
+    return snakeBody[0];
+}
+
+export const snakeIntersection = () => {
+    return onSnake(snakeBody[0], {ignoreHead : true});
 }
 
 const equalPositions = (pos1, pos2) => {
