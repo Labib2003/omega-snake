@@ -45,6 +45,21 @@ input {
     margin: 25px 0;
 }
 
+.snake-odd {
+    background-color: ivory;
+    border: .25vmin solid black;
+}
+
+.snake-even {
+    background-color: tomato;
+    border: .25vmin solid black;
+}
+
+.food {
+    background-color: goldenrod;
+    border: .25vmin solid black;
+}
+
 #touch-controls {
     display: none;
     flex-direction: column;
