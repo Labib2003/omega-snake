@@ -30,6 +30,44 @@ window.addEventListener('keydown', e => {
     };
 })
 
+//touch inputs
+document.getElementById('up').addEventListener('click', () => {
+    if (lastInputDirection.y !== 0){
+        return;
+    }
+    else {
+        inputDirection = {x:0, y:-1};
+        return;
+    }
+});
+document.getElementById('down').addEventListener('click', () => {
+    if (lastInputDirection.y !== 0){
+        return;
+    }
+    else {
+        inputDirection = {x:0, y:1};
+        return;
+    }
+});
+document.getElementById('left').addEventListener('click', () => {
+    if (lastInputDirection.x !== 0){
+        return;
+    }
+    else {
+        inputDirection = {x:-1, y:0};
+        return;
+    }
+});
+document.getElementById('right').addEventListener('click', () => {
+    if (lastInputDirection.x !== 0){
+        return;
+    }
+    else {
+        inputDirection = {x:1, y:0};
+        return;
+    }
+});
+
 export const getInputDirecton = () => {
     lastInputDirection = inputDirection;
     return inputDirection;
