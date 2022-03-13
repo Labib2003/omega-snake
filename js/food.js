@@ -1,14 +1,13 @@
 import {onSnake, expandSnake} from './snake.js'
 
 let food = { x: 3, y: 6 };
-const expansionRate = 1;
 
 export const update = () => {
     if (onSnake(food)) {
-        expandSnake(expansionRate);
-        food = { x: 3, y: 3 };
-    }
-}
+        expandSnake(1);
+        food = { x: 4, y: 6 };
+    };
+};
 
 
 export const draw = (gameBoard) => {
