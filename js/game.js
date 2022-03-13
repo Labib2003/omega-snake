@@ -33,8 +33,8 @@ speedDown.addEventListener('click', () => {
     }
 })
 
+// game clock
 const main = (currentTime) => {
-    // game clock
     if (gameOver){
         gameOverMenu.style.display = 'flex';
         return;
@@ -64,6 +64,7 @@ const update = () => {
 }
 
 const draw = () => {
+    // clearing the old array after shifting it
     gameBoard.innerHTML = '';
     drawSnake(gameBoard);
     drawFood(gameBoard);

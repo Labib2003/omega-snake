@@ -1,6 +1,7 @@
 let inputDirection = {x:0, y:0};
 let lastInputDirection = {x:0, y:0};
 
+// controls
 window.addEventListener('keydown', e => {
     switch (e.key) {
         case 'ArrowUp':
@@ -30,7 +31,7 @@ window.addEventListener('keydown', e => {
     };
 })
 
-//touch inputs
+//touch controls
 document.getElementById('up').addEventListener('click', () => {
     if (lastInputDirection.y !== 0){
         return;
@@ -68,6 +69,7 @@ document.getElementById('right').addEventListener('click', () => {
     }
 });
 
+// the last input is saved to stop the user from reversing the snake
 export const getInputDirecton = () => {
     lastInputDirection = inputDirection;
     return inputDirection;

@@ -37,7 +37,7 @@ input {
 }
 
 #game-board {
-    background-color: #5ca140;
+    background-color: lightgreen;
     height: 75vh;
     width: 75vh;
     display: grid;
