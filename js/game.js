@@ -3,12 +3,14 @@ import { update as updateFood, draw as drawFood } from "./food.js"
 import { outsideGrid } from "./grid.js";
 
 const gameBoard = document.getElementById('game-board');
+const gameOverMenu = document.getElementById('game-over');
 
 const speedInput = document.getElementById('speed-input');
 let speed = parseInt(speedInput.value);
 
 const speedUp = document.getElementById('speed-up');
 const speedDown = document.getElementById('speed-down');
+const restart = document.getElementById('restart-btn');
 
 let lastRenderTime = 0;
 let gameOver = false;
@@ -17,6 +19,11 @@ let gameOver = false;
 speedUp.addEventListener('click', () => {
     speed += 1;
     speedInput.value = speed;
+})
+
+//restart button
+restart.addEventListener('click', () => {
+    window.location = '/';
 })
 
 speedDown.addEventListener('click', () => {
@@ -29,7 +36,8 @@ speedDown.addEventListener('click', () => {
 const main = (currentTime) => {
     // game clock
     if (gameOver){
-        return alert('loser');
+        gameOverMenu.style.display = 'flex';
+        return;
     }
 
     const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000;
