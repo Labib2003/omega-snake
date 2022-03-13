@@ -1,4 +1,5 @@
 import { update as updateSnake, draw as drawSnake } from "./snake.js";
+import { update as updateFood, draw as drawFood } from "./food.js";
 
 const gameBoard = document.getElementById('game-board');
 
@@ -41,9 +42,11 @@ window.requestAnimationFrame(main);
 
 const update = () => {
     updateSnake();
+    updateFood();
 }
 
 const draw = () => {
     gameBoard.innerHTML = '';
     drawSnake(gameBoard);
+    drawFood(gameBoard);
 }
