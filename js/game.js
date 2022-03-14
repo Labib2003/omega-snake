@@ -1,9 +1,10 @@
-import { update as updateSnake, draw as drawSnake, getSnakeHead, snakeIntersection } from "./snake.js"
+import { update as updateSnake, draw as drawSnake, getSnakeHead, snakeIntersection, score as points } from "./snake.js"
 import { update as updateFood, draw as drawFood } from "./food.js"
 import { outsideGrid } from "./grid.js";
 
 const gameBoard = document.getElementById('game-board');
 const gameOverMenu = document.getElementById('game-over');
+const score = document.getElementById('score');
 
 const speedInput = document.getElementById('speed-input');
 let speed = parseInt(speedInput.value);
@@ -36,6 +37,7 @@ speedDown.addEventListener('click', () => {
 // game clock
 const main = (currentTime) => {
     if (gameOver){
+        score.innerText = points;
         gameOverMenu.style.display = 'flex';
         return;
     }

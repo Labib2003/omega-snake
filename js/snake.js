@@ -3,6 +3,7 @@ import { getInputDirecton } from "./input.js";
 // the snake is an array of objects with coordinates used to append them in a grid
 const snakeBody = [{ x: 11, y: 11 }];
 let newSegments = 0;
+ export let score = 1;
 
 export const update = () => {
     addSegments();
@@ -34,6 +35,7 @@ export const draw = (gameBoard) => {
 
 export const expandSnake = (rate) => {
     newSegments += rate;
+    score += 1;
 }
 
 // by default, not ignoring the head. but when calculating snake intersection, the head must be ignored as the head is always intersecting with itself
